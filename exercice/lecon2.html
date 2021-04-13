@@ -1,0 +1,286 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 basic page">
+    <meta name="author" content="babass">
+    <link rel="stylesheet" href="css/main.css?v=1.0">
+</head>
+
+<body>  
+    <div id='main'>
+        <header>
+            <h1>Leçon n°2</h1>
+            <h2>Structuration d'une page web</h2>
+            <nav>
+                <ul>
+                    <li><a href='lecon2/exercice1.html'>Exercice 1</a></li>
+                    <li><a href='lecon2/exercice2.html'>Exercice 2</a></li>
+                    <li><a href='lecon2/exercice3.html'>Exercice 3</a></li>
+                    <li><a href='lecon2/exercice4.html'>Exercice 4</a></li>
+                    <li><a href='lecon2/exercice5.html'>Exercice 5</a></li>
+                    <li><a href='lecon2/exercice6.html'>Exercice 6</a></li>
+                    <li><a href='lecon2/exercice7.html'>Exercice 7</a></li>
+                    <li><a href='lecon2/exercice8.html'>Exercice 8</a></li>
+                    <li><a href='lecon2/exercice9.html'>Exercice 9</a></li>
+                    <li><a href='lecon2/exercice10.html'>Exercice 10</a></li>
+                    <li><a href='lecon2/exercice11.html'>Exercice 11</a></li>
+                    <li><a href='lecon2/exercice12.html'>Exercice 12</a></li>
+                    <li><a href='lecon2/exercice13.html'>Exercice 13</a></li>
+                    <li><a href='lecon2/exercice14.html'>Exercice 14</a></li>
+                    <li><a href='lecon2/exercice15.html'>Exercice 15</a></li>
+                    <li><a href='lecon2/exercice16.html'>Exercice 16</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <header>
+                    <h3>Cours</h3>
+                </header>
+                <article>
+                    <h4>1. Introduction</h4>
+                    Les CSS (pour Cascading Style Sheet ou feuilles de style en cascade) permettent
+                    d’ajouter facilement du style (positions, polices, couleurs, tailles, bordures, ...) à des
+                    documents web. La définition du style peut être associée au document html de plusieurs
+                    façons :<br><br>
+
+                    1. Directement dans la balise à l’aide de l’attribut style, de la manière suivante :<br><br>
+
+                    <blockquote>
+                        &ltp style='color:#ff0000'&gtBla bla bla&lt/p&gt
+                        <p style='color:#ff0000;'>Bla bla bla</p>
+                    </blockquote>
+
+                    2. Dans l’entête du document html, afin de l’appliquer à la totalité de la page. Par exemple, pour appliquer
+                    la police Arial à l’ensemble des paragraphes de la page :<br><br>
+
+                    <blockquote>
+                        &ltstyle&gt<br>
+                        p {font-familly :Arial ;}<br>
+                        &lt/style&gp
+                    </blockquote>
+
+                    3. Dans un fichier externe –dont l’extension est généralement .css- qu’il sera possible d’inclure dans
+                    plusieurs pages web, de la manière suivante :<br><br>
+
+                    <blockquote>
+                        img {border : 1px solid #666666;}<br>
+                        .flashy {font-familly :Arial ; background-color :#00ff00 ;}<br>
+                        #bb1 {background-color:#ff0000;}
+                    </blockquote>
+
+                    Dans les cas 2 et 3, la définition de style repose sur des sélecteurs qui associent une
+                    balise (p, img, ...) à des propriétés (color, border, font-familly...) listées entre accolades.
+                    Les propriétés, aussi présentes dans le cas 1, sont séparées par un point-virgule (;) et
+                    sont composées d’un nom, suivi de deux points (:) et d’une valeur simple (Arial) ou
+                    multiple séparées par des espaces (1px solid #666666).<br><br>
+
+                    Dans le cas de la valeur multiple de border utilisée dans le cas 3, elle permet de définir
+                    la bordure de l’image et utilise 3 paramètres :<br>
+                    <blockquote>
+                        - 1px : l’épaisseur de la bordure<br>
+                        <b>Les tailles</b> peuvent être exprimées en pixels (px), en pourcentage par
+                        rapport au contenant (%), en proportion par rapport à la taille du texte (em)
+                        ou selon unités absolues. L’annexe 1 détaille l’utilisation des tailles :
+                        <a href="http://www.css-faciles.com/unites-css.php">http://www.css-faciles.com/unites-css.php</a><br><br>
+                        - solid : le style<br>
+                        détaillé dans <a href="https://www.w3schools.com/cssreF/pr_border-style.asp">https://www.w3schools.com/cssreF/pr_border-style.asp</a><br><br>
+                        - #666666 : la couleur de la bordure<br>
+                        <b>Les couleurs</b> sont indiquées à l’aide de leur code hexadécimal qui
+                        commence par le signe dièse #. Retrouvez le détail de la gestion des couleurs
+                        dans l’annexe 2 : <a href="https://htmlcolorcodes.com/fr/">https://htmlcolorcodes.com/fr/</a>
+                    </blockquote>
+                </article>
+                <article>
+                    <h4>2. Les selecteurs</h4>
+                    Dans les cas 2 et 3 (page précédente), on utilise un sélecteur pour sélectionner les
+                    éléments auxquels le style va s’appliquer.<br><br>
+
+                    Les noms de <b>éléments</b> sont les sélecteurs de base. Ainsi, la ligne 1 du cas 3 désigne
+                    toutes les images et s’appliquera donc à l’exemple suivant :
+
+                    <blockquote>
+                        &ltimg src=’arnaud.jpg’&gt
+                    </blockquote>
+                    
+                    <b>Classe</b> d’un élément : utilisée en javascript et en CSS à l’aide du point (.) -comme dans
+                    la ligne 2 du cas 3- elle permet de spécifier le style d’un élément à l’aide de l’attribut
+                    classe, comme dans l’exemple suivant :
+                    
+                    <blockquote>
+                        &ltp class=’flashy’&gt ...
+                    </blockquote>
+
+                    L’<b>identifiant</b> : il pourra être attribué de manière unique à un élément, et utilisé en
+                    javascript et en CSS à l’aide du signe dièse (#), comme c’est le cas dans la troisième
+                    ligne du cas 3 pour l’id bb1. Il peut être défini de la manière suivante :
+
+                    <blockquote>
+                        &ltul id=’bb1’&gt ... &lt/ul&gt
+                    </blockquote>
+                    
+                    <b>Compléments :</b><br><br>
+                    
+                    <blockquote>
+                        - On peut combiner les sélecteurs : p.main sélectionne tous les paragraphes qui
+                        ont la classe main.<br><br>
+                        - On peut chainer les sélecteurs pour parcourir l’arborescence : li img va désigner
+                        les img qui sont descendants d’un li (directement ou indirectement)<br><br>
+                        - On peut aussi spécifier une descendance directe avec le supérieur (>):
+                        #album>img va désigner les img qui sont fils d’un élément dont l’id est album.<br><br>
+                        - En fonction de la structure de la page et des sélecteurs choisis, le style pourra
+                        être appliqué à 0, 1 ou plusieurs éléments.<br><br>
+                        - Certains éléments se verront même appliquer plusieurs styles contradictoires.
+                        C’est généralement la dernière valeur lue par le navigateur qui persistera.<br><br>
+                        - On peut définir un style pour plusieurs sélecteurs en les séparant par une
+                        virgule : p, img, section#prems<br><br>
+                        - Pour aller plus loin dans l’utilisation des sélecteurs, reportez-vous à l’annexe 3
+                        <a href="https://code.tutsplus.com/fr/tutorials/the-30-css-selectors-you-must-memorize--net-16048">https://code.tutsplus.com/fr/tutorials/the-30-css-selectors-you-must-memorize--net-16048</a>
+                    </blockquote>
+                </article>
+                <article>
+                    <h4>3. Les balises bloc ou enligne</h4>
+                    Parmi les différents types de balises présentent dans une page web, on peut identifier
+                    deux types de balises<br><br>
+                    <img src="lecon2/images/lecon2_cours3.jpg">
+                    - les balises de type block (des blocs),
+                    qui permettent de structurer la page
+                    et auxquelles on peut imposer une
+                    taille ou une position. Par défaut le
+                    bloc va utiliser la totalité de la
+                    largeur de la page et va commencer
+                    une nouvelle ligne –c’est le cas de la
+                    balise à fond rose sur l’exemple ci-
+                    contre-;<br><br>
+
+                    - les balises de type inline (en-ligne en
+                    français) qui viennent s’intégrer dans le flux du texte pour en modifier la taille, la
+                    police, ou la couleur par exemple, pour intégrer une image, un champ de formulaire,
+                    etc... -c’est le cas de la balise rouge sur l’exemple ci-contre-.
+                </article>
+                <article>
+                    <h4>4. Les balises structurantes</h4>
+                    Lors de l’écriture d’une page web, une des techniques est de commencer par créer la
+                    structure de la page à l’aide de blocs. Afin de les positionner, et avant de considérer
+                    leur contenu, il est conseillé d’y mettre du contenu bidon (<a href="https://www.faux-texte.com/")>https://www.faux-texte.com/</a>
+                    et/ou de colorer les blocs en leur donnant un style background-color (une
+                    couleur de fond). Ainsi, il sera possible de positionner des blocs sans bordure ni marge
+                    dans la page. Dans un second temps, nous ajouterons des contenus dans ces pages.<br><br>
+
+                    Dans ce chapitre, nous allons créer des structures de pages web et utiliserons des blocs
+                    (balises div, qui pourront être remplacées par n’importe quelle balise de type bloc) ainsi
+                    que les propriété CSS suivantes :<br>
+                    <blockquote>
+                        - <b>background-color</b> : la couleur de fond du bloc<br>
+                        - <b>position</b> : le type de positionnement du bloc<br>
+                        - <b>width</b> et <b>height</b> : la taille en largeur et en hauteur du bloc<br>
+                        - <b>top, left, right, bottom</b> : la position du bloc par rapport au haut, à la droite, à
+                        la gauche ou au bas de la page<br>
+                        - <b>z-index</b> : la profondeur (celui avec la plus grande valeur est affiché au-dessus)<br><br>
+                    </blockquote>
+
+                    <a href='lecon2/exercice1.html'><b>Exercice 1</b></a> : Ecrivez une page web contenant 3 blocs de trois couleurs différentes et
+                    ayant 3 hauteurs et 3 largeurs différentes.
+                </article>
+                <article>
+                    <h4>5. Positionnement des blocs</h4>
+                    Par défaut, les blocs sont intégrés dans le flux de la page et affichés à l’endroit où ils
+                    sont écrits, dans la succession des éléments. Pour définir un comportement différent,
+                    on utilisera la propriété CSS position.<br><br>
+
+                    <b>position</b> : modifier le type de positionnement de l’élément dans la page.<br>
+
+                    <blockquote>
+                        - <b>absolute</b> : le positionnement absolu permet de positionner un élément dans la
+                        page (par défaut), ou dans un bloc parent avec un positionnement défini.<br>
+                        - <b>fixed</b> : le positionnement fixe permet de placer un élément dans la fenêtre du
+                        navigateur, même si l’internaute scrolle, l’élément reste fixe.<br>
+                        - <b>relative</b> : le positionnement relatif permet de décaler l’élément par rapport à sa
+                        position normale dans le flux de la page.<br><br>
+                    </blockquote>
+
+                    Pour positionner un élément, on définira les propriétés CSS left ou right, top ou bottom
+                    dont on exprimera la taille.<br><br>
+
+                    Quelques exemples et compléments :<br><br>
+                    - Exemple de positionnement absolu<br><br>
+
+                    <img src="lecon2/images/lecon2_cours5.jpg" width="780">
+
+                    <br>Sur cet exemple, le coin supérieur gauche du bloc vert est à 200 pixels du bord
+                    gauche et à 100 pixels du haut de la page.<br><br>
+                    Quand plusieurs blocs se superposent, il est possible de régler leur ordre d’empilement
+                    avec la propriété z-index qui détermine la valeur de superposition qui est par défaut
+                    de 1. L’élément avec le plus grand z-index sera affiché au-dessus.<br><br>
+                    
+                    <a href='lecon2/exerciec2.html'><b>Exercice 2 :</b></a> Complétez les zones ... pour obtenir
+                    le rendu de droite. Les lignes horizontales
+                    permettent de visualiser le positionnement, mais
+                    ne sont pas à reproduire.
+
+                    <blockquote>
+                        &ltdiv style='background:red;...'&gt&lt/div&gt<br>
+                        &ltdiv style='background:blue;...'&gt&lt/div&gt<br>
+                        &ltdiv style='background:green;...'&gt&lt/div&gt
+                    </blockquote>
+                    
+                    <img src="lecon2/images/lecon2_cours5_2.jpg">
+
+                    <blockquote>
+                        - Exemple de positionnement fixed
+                    </blockquote>
+
+                    <img src="lecon2/images/lecon2_cours5_3.jpg" width="780">
+
+                    <a href='lecon2/exerciec3.html'><b>Exercice 3 :</b></a> Ecrire une page avec une barre horizontale de menu toujours présente
+                    en haut de la page et sur toute la largeur.<br><br>
+
+                    <a href='lecon2/exerciec4.html'><b>Exercice 4 :</b></a> Ecrire une page avec un bloc social (des liens Facebook, twitter,
+                    Instagram, ...) toujours situé en bas à droite de la page.
+
+                    <blockquote>
+                        - Exemple de positionnement relatif.
+                    </blockquote>
+
+                    <img src="lecon2/images/lecon2_cours5_4.jpg" width="780">
+
+                    Cet exemple montre que les balises en-ligne –comme un span- peuvent bénéficier de
+                    positionnement.
+                </article>
+                <article>
+
+
+                </article>
+            </section>
+        </main>
+        <footer>
+            <ul>
+                <li><a href='index.html'>Accueil</a></li>
+                <li><a href='blog.html'>Blog</a></li>
+                <li><a href='cv.html'>CV</a></li>
+            </ul>
+            <ul>
+                <li><a href='index.html'>Accueil</a></li>
+                <li><a href='blog.html'>Blog</a></li>
+                <li><a href='contact.html'>Contact</a></li>
+            </ul>
+            <ul>
+                <li><a href='index.html'>Accueil</a></li>
+                <li><a href='cv.html'>CV</a></li>
+                <li><a href='contact.html'>Contact</a></li>
+            </ul> 
+            <ul>
+                <li><a href='blog.html'>Blog</a></li>
+                <li><a href='cv.html'>CV</a></li>
+                <li><a href='contact.html'>Contact</a></li>
+            </ul> 
+        </footer>    
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/myscript.js"></script>
+    <script src="vendor/bootstrap-5.0.0-beta3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

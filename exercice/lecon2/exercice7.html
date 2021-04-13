@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 basic page">
+    <meta name="author" content="Patrice DE GABBIA">
+
+    <style type="text/css">
+        #main{position:absolute; left:10px; right:10px; top:10px;}
+        header{position:fixed; left:10px; right:10px; top:0px; height:300px;
+            background-color:silver; z-index:10;}
+        #titre{width:900px;}
+        #imageExemple{position:absolute; right:0; top:0; width:auto;}
+        #imageExemple img {height:210px;}
+        main{position:relative; height:100%;
+            margin-top:310px; margin-bottom:70px;} /* obligatoire pour décaller la box et non le texte en haut et en bas. */
+        
+        main{height:200px; max-width:600px; margin-left:auto; margin-right:auto;}
+        #blocGauche{position:absolute; height: 180px; max-width: 600px; margin-right:200px;
+            background-color:silver; overflow:hidden;
+            padding:10px 10px 10px 10px;}
+        #blocDroit{position:absolute; height: 180px; width: 180px; right:0;
+            background-color:red; color: white;
+            padding:10px 10px 10px 10px;}
+    </style>
+
+</head>
+
+<body>  
+    <div id='main'>
+        <header>
+            <div id='titre'>
+                <h1>Leçon n°2</h1>
+                <h2>Exercice 7</h2>
+                <a href='../lecon2.html'><b>Retour</b></a><br><br>
+                Ecrivez le code HTML ainsi que les règles CSS qui permettent de créer le
+                comportement illustré ci-contre :
+                <blockquote>
+                - Le bloc de 200 px de haut est centré. Il s’adapte à la largeur de l’écran avec une
+                largeur maximum de 600 pixels.<br>
+                - La partie droite est un bloc flottant de 200 px de large.<br>
+                - La partie gauche a une marge droite de 200 et s’adapte à la largeur disponible.
+                </blockquote>
+            </div>
+            <div id='imageExemple'>
+                <img src="images/lecon2_cours7_2.jpg">
+            </div>
+        </header>
+        <main>
+            <div id='blocGauche'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus eaque quasi esse doloremque ea tempore, veritatis, culpa consequatur asperiores autem error aut reprehenderit deleniti molestiae! Sequi, dolor quae? Suscipit repellendus officiis provident nobis omnis iure similique molestias quod architecto expedita veniam perferendis aperiam voluptatibus inventore, temporibus cumque totam consequuntur culpa.
+            </div>
+            <div id='blocDroit'>
+                Adipisicing elit. Nam aperiam nulla nisi molestias explicabo sint quam voluptatibus eum unde tempora laborum voluptatum laudantium, dicta qui quae iusto odit consequatur facere.
+            </div>
+        </main>
+    </div>
+</body>
+</html>

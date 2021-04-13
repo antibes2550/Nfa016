@@ -1,0 +1,189 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 basic page">
+    <meta name="author" content="babass">
+    <link rel="stylesheet" href="../css/main.css?v=1.0">
+</head>
+
+<body>  
+    <div id='main'>
+        <header>
+            <style>
+                p { background-color:#339;
+                 color:#fff;;
+                 padding:15px;
+                  border-bottom:5px solid red;
+                 margin-bottom:15px;
+            </style>
+            <h1>Leçon n°3</h1>
+            <h2>Allé plus loin avec le CSS</h2>
+            <nav>
+                <ul>
+                    <li><a href='../lecon3/exercice1.html'>Exercice 1</a></li>
+                    <li><a href='../lecon3/exercice3.html'>Exercice 3</a></li>
+                    <li><a href='../lecon3/exercice4.html'>Exercice 4</a></li>
+                    <li><a href='../lecon3/exercice5.html'>Exercice 5</a></li>
+                    <li><a href='../lecon3/exercice6.html'>Exercice 6</a></li>
+                    <li><a href='../lecon3/exercice7.html'>Exercice 7</a></li>
+                    <li><a href='../lecon3/exercice8.html'>Exercice 8</a></li>
+                    <li><a href='../lecon3/exercice9.html'>Exercice 9</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <header>
+                    <h3>Cours</h3>
+                </header>
+                <article>
+                    <h4>1. Introduction</h4>
+                    Dans le cadre de styles définis dans l’entête d’une page html ou dans un fichier externe, 
+                    on utilise un sélecteur afin de sélectionner les éléments auxquels le style va s’appliquer<br><br>
+
+                    <blockquote>
+                       <p> l'idee d'une arboresencec </p>
+                        <img src="../../image/lecon3.JPG"></p>
+
+                    </blockquote>
+
+                    2. L’annexe 1 présente l’ensemble des règles CSS qui peuvent être utilisées. 
+                     <a href="http://www.css-faciles.com/proprietes-css-familles.php">http://www.css-faciles.com/proprietes-css-familles.php</a>
+                    Le site «canIuse» liste et détaille les propriétés CSS 
+                     les plus récentes et détaille leur support par les principaux navigateurs du marché: <a href="https://caniuse.com/">https://caniuse.com/</a>
+                     Par exemple, voici le support pour le module «Flexible Box  Layout»,
+                     qui permet un positionnement simplifié de blocs en mixant horizontal et vertical: :<br><br>
+
+
+                    3. Dans un fichier externe –dont l’extension est généralement .css- qu’il sera possible d’inclure dans
+                    plusieurs pages web, de la manière suivante :<br><br>
+
+                    <blockquote>
+                        img {border : 1px solid #666666;}<br>
+                        .flashy {font-familly :Arial ; background-color :#00ff00 ;}<br>
+                        #bb1 {background-color:#ff0000;}
+                    </blockquote>
+
+                    D’autres outils permettent de créer des brides de CSS qui pourront être utilisées dans vos pages.
+                    C’est le cas du site CSS-matic (https://www.cssmatic.com) qui propose de générer de manière interactive des brides de CSS
+                     :-Gradient Generator:dégradés de couleur pour les fonds des éléments-Border Radius:faire des arrondis sur les blocs-Box Shadow:des ombrages des éléments CSS-Noise 
+                    Texture:générer des fonds de blocs avec des grain<br><br>
+
+                </article>
+                <article>
+                    <h4>LES BACKGROUND</h4>
+                    Cette propriété permet de spécifier sil’image de fond scrolle en même temps que le contenu 
+                    de l’élément –ce qui est le comportement par défaut-ou si elle s’affiche de manière fixe –valeur 
+                    fixed-background-attachment:fixed;<br><br>
+
+                    <blockquote>
+                        <img src="../../image/leconµ32.JPG" alt="">
+                    </blockquote>
+                    
+                    <blockquote> CSS3 offre la possibilité de créer des fonds dégradés.Cette fonctionnalité est détaillée ici :
+                         http://www.w3schools.com/css/css3_gradients.aspInternet 
+                        propose de nombreux outils interactifspour générer des gradients évolués. Celui-ci est simple d’utilisation:
+                         <a href="http://www.cssmatic.com/gradient-generator"></a>
+                    </blockquote>
+                    <blockquote>
+                        PLUSIEUR IMAGES SUPERPOSE
+                    </blockquote>
+
+                    <img src="../../image/lecon33.JPG">
+                    <blockquote>
+                        background-size
+                    </blockquote>
+                    
+                    <b>Cette propriété permet de spécifier la taille de
+                     l’image de background en hauteur et en largeur, en pixels ou en % de l’élément parent. :</b><br><br>
+                    
+                    <blockquote>
+                        Exemple avec une image dont on spécifie la taille:<br><br>
+                        <img src="../../image/lecon34.JPG">
+                        <a href="https://code.tutsplus.com/fr/tutorials/the-30-css-selectors-you-must-memorize--net-16048">https://code.tutsplus.com/fr/tutorials/the-30-css-selectors-you-must-memorize--net-16048</a>
+                    </blockquote>
+                </article>
+                <article>
+                    <h1>Plus loin avec les CSS10|15Background-clip</h1>
+                    <blockquote>Cette propriété permet de définir la zone d’affichage du background parmi la content-box (zone de contenu seulement), la padding-box (qui comprend le contenu et le padding), 
+                        ou la border-box (zone incluant la bordure), comme décrit dans le schéma ci-dessus: <br> <br>
+                    </blockquote>
+                    <blockquote><img src="../../image/lecon35.JPG" alt=""></blockquote>
+                </article>
+                <article>
+                    <h2>background-origin</h2>
+                    <blockquote>
+                        
+                        <p>Cette propriété permet de spécifier la zone de définition –et donc la taille et la position 
+                            d’origine-parmi la content-box (zone de contenu seulement), la padding-box (qui comprend le contenu et le padding),
+                            ou la border-box (zone incluant la bordure), comme décrit dans le schéma ci-dessus:</p> <br>
+                    </blockquote>
+                    <h1>FlexBox et Grid Layout</h1>
+                    <blockquote>
+                        La mise en page d'un site ou d'une application est toujours quelque chose de complexe et fastidieux à 
+                        développer/maintenir. Maintenant que nous maitrisons les bases de CSS, il vous est possible de comprendre 
+                        les agencements spécifiques qui sont apparus ces dernières années, ainsi que ceux qui ne manqueront pas
+                        d’arriver dans les prochaines années. Nous allons en présenter deux brièvement. 
+                        Ils peuvent aussi se combine. <br>
+
+                    </blockquote>
+                    <img src="../../image/lecon36.JPG" alt=""><br><br>
+                    <h3>Flex box</h3>
+                    <blockquote>
+                        Plus loin avec les CSS12|155.FlexBox et Grid Layout La mise en page d'un site ou d'une application est toujours quelque chose de complexe et fastidieux à développer/maintenir. Maintenant que nous maitrisons les bases de CSS, il vous est possible de comprendre les agencements spécifiques qui sont apparus ces dernières années, ainsi que ceux qui ne manqueront pas d’arriver dans les prochaines années. Nous allons en présenter deux brièvement. Ils peuvent aussi se combiner.Flex BoxFlex  Box  propose  un  modèle unidirectionnel à  deux  niveaux:  des  lignes  dans  des colonnes ou des colonnes dans des lignes, et propose toutes les propriétés pour aligner et espacer uniformément les blocs.
+                        Ainsi, le modèle flexboxdéfinit des containeurs et des éléments
+                        qui seront disposés à l’intérieur des containers. <br>
+                        Détail de la documentation:
+                        <a href="https://la-cascade.io/flexbox-guide-complet">https://la-cascade.io/flexbox-guide-complet</a> <br>
+                        Générateur interactif en français de CSS flexbox :
+                        <a href="//outils-css.aliasdmc.fr/generateur-de-flexbox.php">//outils-css.aliasdmc.fr/generateur-de-flexbox.php</a>
+                    </blockquote>
+                    <h3>Grid Layout</h3>
+                    <blockquote>
+                        Ce modèle va structurer la page web selon une grille qui sera manière bidirectionnelle.
+                        Les éléments pourront alors occuper plusieurs lignes ou colonnes.
+                        Introduction: 
+                        <a href="https://putaindecode.io/articles/introduction-a-grid-layout">https://putaindecode.io/articles/introduction-a-grid-layout</a><br>
+                        Guide complet:
+                        <a href="https://css-tricks.com/snippets/css/complete-guide-grid">https://css-tricks.com/snippets/css/complete-guide-grid</a><br>
+                        Générateur interactifde Grid Layout :
+                        <a href="https://grid.layoutit.com">https://grid.layoutit.com</a>
+                    </blockquote>
+                </article>
+            
+
+                
+        </main>
+
+
+        <footer>
+            <ul>
+                <li><a href='index.html'>Accueil</a></li>
+                <li><a href='blog.html'>Blog</a></li>
+                <li><a href='cv.html'>CV</a></li>
+            </ul>
+            <ul>
+                <li><a href='index.html'>Accueil</a></li>
+                <li><a href='blog.html'>Blog</a></li>
+                <li><a href='contact.html'>Contact</a></li>
+            </ul>
+            <ul>
+                <li><a href='index.html'>Accueil</a></li>
+                <li><a href='cv.html'>CV</a></li>
+                <li><a href='contact.html'>Contact</a></li>
+            </ul> 
+            <ul>
+                <li><a href='blog.html'>Blog</a></li>
+                <li><a href='cv.html'>CV</a></li>
+                <li><a href='contact.html'>Contact</a></li>
+            </ul> 
+        </footer>    
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/myscript.js"></script>
+    <script src="vendor/bootstrap-5.0.0-beta3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
